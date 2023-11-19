@@ -3,6 +3,9 @@ pipeline {
     triggers {
         cron '00 11 * * 6' // Run every Saturday at 11:00 AM
     }
+    environment {
+        SMTP_CREDENTIALS = credentials('SMTP_CREDENTIALS') // Replace 'smtp-credentials-id' with the ID of your stored credentials
+    }
     stages {
         stage('Clone Repository') {
             steps {
