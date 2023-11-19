@@ -28,7 +28,7 @@ pipeline {
                         def smtp_server = 'smtp.gmail.com'
 
                         // Retrieve password
-                        withCredentials([string(credentialsId: 'SMTP_CREDENTIALS', variable: 'SMTP_PASSWORD')]) {
+                        withCredentials([usernamePassword(credentialsId: 'SMTP_CREDENTIALS', variable: 'SMTP_PASSWORD')]) {
                             def password = env.SMTP_PASSWORD
                             // Use the retrieved username and password in the Python script
                             sh "python3 send_maintenance_email.py '${recipients}' '${sender}' '${message}' '${username}' '${password}' '${smtp_server}'"
