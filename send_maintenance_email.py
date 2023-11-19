@@ -36,16 +36,16 @@ def send_email(recipients,
 
 
 # # Example usage
-# recipients = ['sawhil95@gmail.com', 'rajshri0999@gmail.com', 'krishna4537@gmail.com']
-# sender = 'krishna.d190798@gmail.com'
-# message = 'Service XYZ has planned maintenance on Saturday from 14:00 till 17:00 CET'
+recipients = ['sawhil95@gmail.com', 'rajshri0999@gmail.com', 'krishna4537@gmail.com']
+sender = 'krishna.d190798@gmail.com'
+message = 'Service XYZ has planned maintenance on Saturday from 14:00 till 17:00 CET'
 # username = 'krishna.d190798@gmail.com'  # Replace with your username
 # password = 'zxri sglm smlm piyc'  # Replace with your password
 if __name__ == "__main__":
     # Example usage
-    recipients = sys.argv[1].split(',')
-    sender = sys.argv[2]
-    message = sys.argv[3]
+    # recipients = sys.argv[1].split(',')
+    # sender = sys.argv[2]
+    # message = sys.argv[3]
     username = sys.argv[4]
     password = sys.argv[5]
     smtp_server = sys.argv[6] if len(sys.argv) > 6 else 'smtp.gmail.com'
