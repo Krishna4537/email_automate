@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 def send_email(recipients,
                sender,
                message,
-               server='smtp.office365.com',
+               server='smtp.gmail.com',
                port=587,
                username='',
                password=''):

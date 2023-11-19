@@ -4,13 +4,15 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-username/your-repository.git'
+                git 'https://github.com/Krishna4537/email_automate.git'
             }
         }
 
         stage('Send Maintenance Notification Email') {
             steps {
+                script {
                 sh "python send_maintenance_email.py '${params.RECIPIENTS}' '${params.SENDER}' '${params.MESSAGE}'"
+                }
             }
         }
     }
