@@ -12,7 +12,7 @@ pipeline {
         stage('Send Maintenance Notification Email') {
             steps {
                 script {
-                sh "python send_maintenance_email.py '${params.RECIPIENTS}' '${params.SENDER}' '${params.MESSAGE}'"
+                sh "python3 send_maintenance_email.py '${params.RECIPIENTS}' '${params.SENDER}' '${params.MESSAGE}'"
                 }
             }
         }
