@@ -6,7 +6,6 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                // git 'https://github.com/Krishna4537/email_automate.git'
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'demo_job', url: 'https://github.com/Krishna4537/email_automate.git']])
             }
         }
@@ -23,8 +22,8 @@ pipeline {
 
                         sh "python3 send_maintenance_email.py '${recipients}' '${sender}' '${message}' '${username}' '${SMTP_CREDENTIALS}' '${smtp_server}'"
                     }
+                }
             }
         }
     }
-
 }
