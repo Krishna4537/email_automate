@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    triggers {
+        cron '00 11 * * 6' // Run every Saturday at 11:00 AM
+    }
     stages {
         stage('Clone Repository') {
             steps {
@@ -18,7 +20,4 @@ pipeline {
         }
     }
 
-    triggers {
-        cron '00 11 * * 6' // Run every Saturday at 11:00 AM
-    }
 }
