@@ -19,6 +19,6 @@ pipeline {
     }
 
     triggers {
-        cron '08 19 * * 6' // Run every Saturday at 11:00 AM
+        cron '00 11 * * 6' // Run every Saturday at 11:00 AM
     }
 }
