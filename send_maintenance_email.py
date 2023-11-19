@@ -30,6 +30,7 @@ def send_email(recipients,
       # Send the message
       server.sendmail(sender, recipients, msg.as_string())
       print("Email sent successfully!")
+      
   except Exception as e:
     print(f"Failed to send email: {e}")
 
@@ -48,6 +49,7 @@ if __name__ == "__main__":
     username = sys.argv[4]
     password = sys.argv[5]
     smtp_server = sys.argv[6] if len(sys.argv) > 6 else 'smtp.gmail.com'
+    
 
     send_email(recipients, sender, message, server=smtp_server, username=username, password=password)
 

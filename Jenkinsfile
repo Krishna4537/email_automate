@@ -23,7 +23,7 @@ pipeline {
                         def username = 'krishna.d190798@gmail.com'
                         def smtp_server = 'smtp.gmail.com'
 
-                        sh "python3 send_maintenance_email.py '${recipients}' '${sender}' '${message}' '${username}' '${SMTP_CREDENTIALS}' '${smtp_server}'"
+                        sh "python3 send_maintenance_email.py '${recipients}' '${sender}' '${message}' '${username}' '${env.SMTP_CREDENTIALS}' '${smtp_server}'"
                     }
                 }
             }
