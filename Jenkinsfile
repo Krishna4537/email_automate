@@ -28,7 +28,7 @@ pipeline {
                         def smtp_server = 'smtp.gmail.com'
                         def password = env.SMTP_CREDENTIALS_PSW
                          // Use the retrieved username and password in the Python script
-                        sh "python3 send_maintenance_email.py '${username}' '${password}' '${smtp_server}'"
+                        sh "python3 send_maintenance_email.py '${recipients}' '${sender}' '${message}' '${username}' '${password}' '${smtp_server}'"
                         
 
                         echo "Python script executed successfully"
