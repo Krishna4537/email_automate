@@ -21,7 +21,7 @@ pipeline {
                     // Retrieve username
                     withCredentials([usernamePassword(credentialsId: 'SMTP_CREDENTIALS', usernameVariable: 'SMTP_CREDENTIALS_USR', passwordVariable: 'SMTP_CREDENTIALS_PSW')]) {
                         echo "Credentials retrieved successfully"
-                        // def recipients = 'sawhil95@gmail.com,rajshri0999@gmail.com,krishna4537@gmail.com'
+                        def recipients = 'sawhil95@gmail.com,rajshri0999@gmail.com,krishna4537@gmail.com'
                         // def sender = 'krishna.d190798@gmail.com'
                         // def message = 'Service XYZ has planned maintenance on Saturday from 14:00 till 17:00 CET'
                         def username = SMTP_CREDENTIALS_USR
