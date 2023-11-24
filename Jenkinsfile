@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        cron ('*/5 * * * *') // Run every Saturday at 11:00 AM
+        cron ('00 11 * * 6') // Run every Saturday at 11:00 AM
     }
     environment {
         SMTP_CREDENTIALS = credentials('SMTP_CREDENTIALS') 
